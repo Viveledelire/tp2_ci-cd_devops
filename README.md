@@ -8,7 +8,7 @@ Dans un premier temps, vous aurez besoin de créer un repository github pour sto
 
 ## Création d'une application python simple avec tests unitaires
 
-Ensuite, vous aurez besoin d'une application à faire tourner. Pour cela, vous pouvez simplement récupérer les fichiers (`app.py`, `test_app.py` et `requirements.txt`) disponibles dans ce repository et les ajouter dans le votre.
+Ensuite, vous aurez besoin d'une application à faire tourner. Pour cela, vous pouvez simplement récupérer les fichiers (`app.py`, `templates/index.html`, `test_app.py` et `requirements.txt`) disponibles dans ce repository et les ajouter dans le votre.
 
 ## Création d'un Web App Azure
 
@@ -60,6 +60,23 @@ Attention cependant à bien modifier les `needs` du job `deploy` par la suite po
 Vous pouvez ensuite allez dans l'onglet `Actions` de github pour voir vos jobs en "action" sous la forme d'une pipeline.
 ![image](https://github.com/Viveledelire/tp2_ci-cd_devops/assets/97473758/41177943-5b80-40e4-93e7-f7138965efb9)
 
+Une fois que votre pipeline s'est validée, vous aurez la possibilité d'aller sur votre Web App pour voir à quoi elle ressemble.
+
 ### Conseil
 
 Avant de modifier votre Workflow, attendez bien qu'il se soit terminé une première fois pour être sûr que le déploiement fonctionne sans encombre.
+
+## Test de la CI/CD
+
+Pour tester que votre CI/CD fonctionne bien, vous pouvez allez modifier les lignes suivantes dans le fichier `app.py` :
+```
+@app.route('/')
+def home():
+    title = "Flask CI/CD Demo"
+    subtitle = "A simple example of deploying a Flask app with CI/CD"
+    return render_template('index.html', title=title, subtitle=subtitle)
+    #return "Welcome to the Flask CI/CD Demo"
+```
+
+Vous n'aurez ensuite qu'à commit vos modifications puis retourner dans l'onglet `Actions` pour voir que votre CI/CD s'est bien relancée.
+Une fois votre CI/CD terminée, vous pourrez retourner sur votre Web App pour voir que vos modifications ont été prises en compte.
