@@ -58,6 +58,7 @@ Attention cependant à bien modifier les `needs` du job `deploy` par la suite po
     needs: test
 ```
 Vous pouvez ensuite allez dans l'onglet `Actions` de github pour voir vos jobs en "action" sous la forme d'une pipeline.
+![image](https://github.com/Viveledelire/tp2_ci-cd_devops/assets/97473758/41177943-5b80-40e4-93e7-f7138965efb9)
 
 ### Conseil
 
