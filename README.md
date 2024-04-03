@@ -27,9 +27,36 @@ Une fois ces étapes passées, vous pouvez cliquer sur le bouton `Review + Creat
 Après avoir finalisé votre Web App en suivant les indications, un dossier `.github/workflows/` a dû se créer automatiquement. Si ce n'est pas le cas, attendez bien que votre Web App ait terminé de se déployer et recharger votre page github. 
 Dans ce dossier devrait se trouver un fichier .yml dont le nom devrait ressembler à ça : `<nom_branche>_<nom_webapp>.yml`.
 
-Ce Workflow contient, par défaut, deux jobs : `build` et `deploy`. Mais vous pouvez en rajouter autant que vous voulez. Vous pouvez, par exemple, récupérer le job `tests` ci-dessous et l'ajouter dans votre Workflow.
-Attention cependant à bien modifier les `needs` du job `deploy` par la suite pour que la pipeline reste fonctionnelle.
+Ce Workflow contient, par défaut, deux jobs : `build` et `deploy`. Mais vous pouvez en rajouter autant que vous voulez. Vous pouvez, par exemple, récupérer le job `test` ci-dessous et l'ajouter dans votre Workflow.
+```
+  test:
+    runs-on: ubuntu-latest
+    needs: build
 
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python version
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.12'
+
+      - name: Create and start virtual environment
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          
+      - run: pip install -r requirements.txt 
+      
+      - name: Run tests
+        run: python -m pytest -v
+```
+Attention cependant à bien modifier les `needs` du job `deploy` par la suite pour que la pipeline reste fonctionnelle.
+```
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+```
 Vous pouvez ensuite allez dans l'onglet `Actions` de github pour voir vos jobs en "action" sous la forme d'une pipeline.
 
 ### Conseil
