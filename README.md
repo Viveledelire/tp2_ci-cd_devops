@@ -16,7 +16,7 @@ Dans un premier temps, dans l'onglet `Basics` définissez un nom pour votre Web 
 Vous pouvez vous référer à l'image ci-dessous :
 ![image](https://github.com/Viveledelire/tp2_ci-cd_devops/assets/97473758/83e53c30-fe1b-414f-9ede-6f978b9c8418)
 
-Ensuite, dans l'onglet `Deployment`, activez le `déploiement continu` et liez votre compte github à azure. Vous pourrez ensuite choisir le repository ainsi que la branche que vous souhaitez viser.
+Ensuite, dans l'onglet `Deployment`, activez le `déploiement continu` et liez votre compte github à Azure. Vous pourrez ensuite choisir le repository ainsi que la branche que vous souhaitez viser.
 Encore une fois, vous pouvez vous référer à l'image ci-dessous :
 ![image](https://github.com/Viveledelire/tp2_ci-cd_devops/assets/97473758/2d146171-31a6-40f2-a909-8d3e59fe09d5)
 
@@ -61,6 +61,10 @@ Vous pouvez ensuite allez dans l'onglet `Actions` de github pour voir vos jobs e
 ![image](https://github.com/Viveledelire/tp2_ci-cd_devops/assets/97473758/41177943-5b80-40e4-93e7-f7138965efb9)
 
 Une fois que votre pipeline s'est validée, vous aurez la possibilité d'aller sur votre Web App pour voir à quoi elle ressemble.
+Vous aurez accès au lien de votre Web App soit, depuis la pipeline après qu'elle se soit complétée : 
+![image](https://github.com/Viveledelire/tp2_ci-cd_devops/assets/97473758/4ec87540-30c4-41ad-b262-09fb07bc9e8b)
+soit, depuis l'overview de votre Web App directement dans Azure : 
+![image](https://github.com/Viveledelire/tp2_ci-cd_devops/assets/97473758/1132d106-234f-4ce6-aa76-9c6c72338f59)
 
 ### Conseil
 
