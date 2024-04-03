@@ -45,7 +45,21 @@ jobs:
           path: |
             release.zip
             !venv/ 
-      
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python version
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.12'
+
+      - name: Lancement des test
+        run: |
+          source venv/bin/activate
+          python -m pytest -v
           
   deploy:
     runs-on: ubuntu-latest
