@@ -47,19 +47,27 @@ jobs:
             !venv/ 
   test:
     runs-on: ubuntu-latest
+    needs: build
 
     steps:
       - uses: actions/checkout@v4
 
+      
       - name: Set up Python version
         uses: actions/setup-python@v1
         with:
           python-version: '3.12'
 
-      - name: Lancement des test
+      - name: Create and start virtual environment
         run: |
+          python -m venv venv
           source venv/bin/activate
-          python -m pytest -v
+          
+      - run: pip install -r requirements.txt 
+
+      # Run tests
+      - name: Run tests
+        run: python -m pytest -v
           
   deploy:
     runs-on: ubuntu-latest
