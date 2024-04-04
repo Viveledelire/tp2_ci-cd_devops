@@ -68,7 +68,7 @@ Vous pouvez ensuite allez dans l'onglet `Actions` de github pour voir vos jobs e
 Une fois que votre pipeline s'est validée, vous aurez la possibilité d'aller sur votre Web App pour voir à quoi elle ressemble. <br />
 Vous aurez accès au lien de votre Web App soit, depuis la pipeline après qu'elle se soit complétée : 
 ![image](https://github.com/Viveledelire/tp2_ci-cd_devops/assets/97473758/4ec87540-30c4-41ad-b262-09fb07bc9e8b) <br />
-soit, depuis l'overview de votre Web App directement dans Azure : 
+soit, depuis l'overview de votre Web App directement dans Azure : <br />
 ![image](https://github.com/Viveledelire/tp2_ci-cd_devops/assets/97473758/1132d106-234f-4ce6-aa76-9c6c72338f59)
 
 ## Test de la CI/CD
