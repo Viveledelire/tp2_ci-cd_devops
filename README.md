@@ -29,8 +29,8 @@ Dans ce dossier devrait se trouver un fichier .yml dont le nom devrait ressemble
 
 Ce Workflow contient, par défaut, deux jobs : `build` et `deploy`. Mais vous pouvez en rajouter autant que vous voulez. 
 
-[!TIP]
-Avant de modifier votre Workflow, attendez bien qu'il se soit terminé une première fois pour être sûr que le déploiement fonctionne sans encombre.
+> [!TIP]
+> Avant de modifier votre Workflow, attendez bien qu'il se soit terminé une première fois pour être sûr que le déploiement fonctionne sans encombre.
 
 Vous pouvez, par exemple, récupérer le job `test` ci-dessous et l'ajouter dans votre Workflow.
 ```
