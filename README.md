@@ -24,10 +24,15 @@ Une fois ces étapes passées, vous pouvez cliquer sur le bouton `Review + Creat
 
 ## Le Workflow et la CI/CD
 
-Après avoir finalisé votre Web App en suivant les indications, un dossier `.github/workflows/` a dû se créer automatiquement. Si ce n'est pas le cas, attendez bien que votre Web App ait terminé de se déployer et recharger votre page github. 
+Après avoir finalisé votre Web App en suivant les indications, un dossier `.github/workflows/` a dû se créer automatiquement. Si ce n'est pas le cas, attendez bien que votre Web App ait terminé de se déployer et recharger votre page github. <br />
 Dans ce dossier devrait se trouver un fichier .yml dont le nom devrait ressembler à ça : `<nom_branche>_<nom_webapp>.yml`.
 
-Ce Workflow contient, par défaut, deux jobs : `build` et `deploy`. Mais vous pouvez en rajouter autant que vous voulez. Vous pouvez, par exemple, récupérer le job `test` ci-dessous et l'ajouter dans votre Workflow.
+Ce Workflow contient, par défaut, deux jobs : `build` et `deploy`. Mais vous pouvez en rajouter autant que vous voulez. 
+
+[!TIP]
+Avant de modifier votre Workflow, attendez bien qu'il se soit terminé une première fois pour être sûr que le déploiement fonctionne sans encombre.
+
+Vous pouvez, par exemple, récupérer le job `test` ci-dessous et l'ajouter dans votre Workflow.
 ```
   test:
     runs-on: ubuntu-latest
@@ -60,15 +65,11 @@ Attention cependant à bien modifier les `needs` du job `deploy` par la suite po
 Vous pouvez ensuite allez dans l'onglet `Actions` de github pour voir vos jobs en "action" sous la forme d'une pipeline.
 ![image](https://github.com/Viveledelire/tp2_ci-cd_devops/assets/97473758/41177943-5b80-40e4-93e7-f7138965efb9)
 
-Une fois que votre pipeline s'est validée, vous aurez la possibilité d'aller sur votre Web App pour voir à quoi elle ressemble.
+Une fois que votre pipeline s'est validée, vous aurez la possibilité d'aller sur votre Web App pour voir à quoi elle ressemble. <br />
 Vous aurez accès au lien de votre Web App soit, depuis la pipeline après qu'elle se soit complétée : 
-![image](https://github.com/Viveledelire/tp2_ci-cd_devops/assets/97473758/4ec87540-30c4-41ad-b262-09fb07bc9e8b)
+![image](https://github.com/Viveledelire/tp2_ci-cd_devops/assets/97473758/4ec87540-30c4-41ad-b262-09fb07bc9e8b) <br />
 soit, depuis l'overview de votre Web App directement dans Azure : 
 ![image](https://github.com/Viveledelire/tp2_ci-cd_devops/assets/97473758/1132d106-234f-4ce6-aa76-9c6c72338f59)
-
-### Conseil
-
-Avant de modifier votre Workflow, attendez bien qu'il se soit terminé une première fois pour être sûr que le déploiement fonctionne sans encombre.
 
 ## Test de la CI/CD
 
