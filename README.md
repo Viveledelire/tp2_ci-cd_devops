@@ -1,6 +1,7 @@
 # tp2_ci-cd_devops
 
 Création d'une application Flask sur Azure avec CI/CD.
+test CI/CD
 
 ## Création d'un repository github
 
