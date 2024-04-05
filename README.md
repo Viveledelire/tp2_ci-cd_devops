@@ -10,7 +10,7 @@ Dans un premier temps, vous aurez besoin de créer un repository github pour sto
 
 Ensuite, vous aurez besoin d'une application à faire tourner. Pour cela, vous pouvez simplement récupérer les fichiers (`app.py`, `templates/index.html`, `test_app.py` et `requirements.txt`) disponibles dans ce repository et les ajouter dans le votre.
 
-## Création d'un Web App Azure
+## Création d'une Web App Azure
 
 Dans un premier temps, dans l'onglet `Basics` définissez un nom pour votre Web App et précisez le langage utilisé pour l'application, ici `python 3.12`.
 Vous pouvez vous référer à l'image ci-dessous :
